@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+#form{
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}

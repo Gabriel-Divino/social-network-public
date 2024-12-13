@@ -1,0 +1,64 @@
+<div  data-bs-toggle="modal" data-bs-target="#exampleModal" id="modal">
+         
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{Post.postTitle}} </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <div id="user_profile">
+            <img src={{User.ProfilePicture}} />
+            <p (click)="go()"> 
+                {{User.name}} {{User.last_name}}
+            </p>
+        </div>
+
+
+
+        <p>
+            {{Post.postDescription}}
+        </p>
+
+    <!--Inicio do Carrosel-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+
+    <div *ngFor="let image of Post.images; let i = index">
+    <div [ngClass]="{'carousel-item': true, 'active': i === 0}">
+        <img [src]="image.content" id="img_carousel" alt="...">
+    </div>
+    </div>
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <i class="bi bi-arrow-left"></i>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <i class="bi bi-arrow-right"></i>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    </div>
+    <!--Fim do Carrosel-->
+    
+    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close_modal">Fechar</button>
+    </div>
+    </div>
+</div>
+</div>  

@@ -1,0 +1,19 @@
+<div>
+    <div class="card">
+        
+        <div>
+            <img src={{image}} class="card-img-top" alt="..." id="card_image">
+        </div>
+
+        
+        <div class="card-body">
+            <h5 class="card-title">{{Title}}</h5>
+          <a  class="btn btn-primary" id="button" (click)="openModal()">Visualizar</a>
+          <div *ngIf="UserId == UserSessionId">
+            <a  class="btn btn-dark" style="margin-left: 35%;margin-top: 2%;" routerLink="/profile/edit-post/{{PostId}}"  >Gerenciar</a>
+          </div>
+          
+        </div>
+    </div>
+
+</div>

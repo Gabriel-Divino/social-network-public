@@ -1,0 +1,35 @@
+<app-header></app-header>
+<app-alert  [Text]="changeText" [Status]="changeStatus"></app-alert>
+
+<h1>Gerencie Suas Informações da sua Conta</h1>
+
+
+<div id="form">
+
+    <p> 
+        <label>Nome : </label>
+        <input type="text" class="form-control"  [(ngModel)]="Name"/>
+    </p>
+
+    <p> 
+        <label>Sobrenome : </label>
+        <input type="text" class="form-control"  [(ngModel)]="LastName"/>
+    </p>
+
+    <p> 
+        <label>Data de Nascimento : </label>
+        <input type="date" class="form-control" [(ngModel)]="DateOfBirth" />
+    </p>
+
+    <p> 
+        <label>Genêro : </label>
+        <select class="form-select"  [(ngModel)]="Gender">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Indefinido">Indefinido</option>
+        </select>
+    </p>
+
+    <button class="btn btn-primary" (click)="setData()">Salvar Informações</button>
+
+</div>

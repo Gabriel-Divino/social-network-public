@@ -1,0 +1,25 @@
+<app-alert [Text]="changeText" [Status]="changeStatus"></app-alert>
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title text-center">Registrar</h3>
+        <div id="form_register">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" [(ngModel)]="Email" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" [(ngModel)]="Password" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="Confirm_Password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" (click)="register()">Registrar</button>
+        </div>
+        <div class="text-center mt-3">
+            <a href="/login"  style="font-size: 120%;">Já tem uma conta? Faça login</a>
+        </div>
+    </div>
+</div>

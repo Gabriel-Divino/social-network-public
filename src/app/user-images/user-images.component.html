@@ -1,0 +1,27 @@
+<app-header></app-header>
+<app-alert  [Text]="changeText" [Status]="changeStatus"></app-alert>
+<h1>Gerencie as Imagens de Seu Perfil.</h1>
+
+<div id="form">
+
+    <p>
+        <label>
+            Imagem de Perfil
+        </label>
+
+        <input type="file" class="form-control"  accept="image/*" (change)="onProfilePictureSelected($event)"/>
+        <img src={{profilePictureUrl}}  />
+    </p>
+
+    <p>
+        <label>
+            Imagem de Capa
+        </label>
+        <input type="file" class="form-control" accept="image/*"  (change)="onCoverImageSelected($event)"/>
+        <img src={{coverImageUrl}}  />
+    </p>
+
+    <button class="btn btn-primary" (click)="setImages()">Salvar</button>
+
+</div>
+

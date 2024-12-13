@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div id="profile">
+
+    <img  id="cover_image" src={{coverImage}}/>
+    <img  id="profile_picture" src={{ProfilePicture}} />
+    <p id="profile_name">{{UserProfile.name}} {{UserProfile.last_name}}</p>
+</div>
+
+
+<div *ngIf="UserProfileId == UserId" class="button-container">
+    <a class="btn btn-primary" id="new_post" routerLink="/profile/new-post">Nova Publicação</a>
+</div>
+
+
+
+<div id="posts" >
+    <h2 style="text-align: center;margin-top: 5%;">Postagens</h2>
+    <app-cards [Posts]="Posts"></app-cards>
+
+</div>
+
+

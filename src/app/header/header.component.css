@@ -1,0 +1,27 @@
+.navbar-brand img {
+    height: 40px; /* ajuste conforme necessário */
+    width: auto;
+}
+
+.navbar-nav .nav-item {
+    padding: 0 10px;
+}
+
+.navbar-nav .nav-item a {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #0B5ED7; /* cor vermelha do Pinterest */
+}
+
+.navbar-nav .nav-item.active a {
+    color: #0B5ED7; /* cor vermelha do Pinterest */
+}
+
+#search_images{
+    border-radius: 10px;
+    width: 500px;
+    margin-left: 20%;
+}

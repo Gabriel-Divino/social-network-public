@@ -1,0 +1,73 @@
+<app-header></app-header>
+<app-alert [Text]="changeText" [Status]="changeStatus"></app-alert>
+
+
+<div id="form">
+
+    <p>
+        <label>Titulo :</label>
+        <input type="text" class="form-control" [(ngModel)]="postTitle" />
+    </p>
+
+    <p>
+        <label>Descrição :</label>
+        <textarea class="form-control" [(ngModel)]="postDescription"></textarea>
+    </p>
+
+    <div class="class_image">
+        <label>Imagem 1</label>
+
+        <select class="form-select" [(ngModel)]="imageType1">
+            <option value="link">Link da Imagem</option>
+            <option value="file">Arquivo de Imagem</option>
+        </select>
+
+        <div *ngIf="imageType1 == 'link'">
+            <input type="text" class="form-control" placeholder="Link da Imagem" [(ngModel)]="imageContent1"/>   
+        </div>
+
+        <div *ngIf="imageType1 == 'file'">
+            <input type="file"  class="form-control" (change)="selectImage($event,'img1')" />
+        </div>
+
+    </div>
+
+    <div class="class_image">
+        <label>Imagem 2</label>
+
+        <select class="form-select" [(ngModel)]="imageType2">
+            <option value="link">Link da Imagem</option>
+            <option value="file">Arquivo de Imagem</option>
+        </select>
+
+        <div *ngIf="imageType2 == 'link'">
+            <input type="text" class="form-control" placeholder="Link da Imagem" [(ngModel)]="imageContent2"/>   
+        </div>
+
+        <div *ngIf="imageType2 == 'file'">
+            <input type="file"  class="form-control" (change)="selectImage($event,'img2')" />
+        </div>
+
+    </div>
+
+    <div class="class_image">
+        <label>Imagem 3</label>
+
+        <select class="form-select" [(ngModel)]="imageType3">
+            <option value="link">Link da Imagem</option>
+            <option value="file">Arquivo de Imagem</option>
+        </select>
+
+        <div *ngIf="imageType3 == 'link'">
+            <input type="text" class="form-control" placeholder="Link da Imagem" [(ngModel)]="imageContent3"/>   
+        </div>
+
+        <div *ngIf="imageType3 == 'file'">
+            <input type="file"  class="form-control" (change)="selectImage($event,'img3')" />
+        </div>
+
+    </div>
+
+    <button class="btn btn-primary" type="button" (click)="makePost()">Fazer Postagem</button>
+
+</div>

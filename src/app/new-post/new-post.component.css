@@ -1,0 +1,19 @@
+#form{
+    width: 70%;
+    margin-left: 15%;
+}
+
+select{
+    width: 30%;
+    float: right;
+    margin-bottom: 2.5%;
+    margin-right: 60%;
+}
+
+.class_image{
+    margin-bottom: 5%;
+}
+
+.class_image label{
+    font-size: 120%;
+}
